@@ -17,16 +17,26 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 console.log ('JS OK')
 
-/*
-1-Prendere l'elemento dal DOM
-2-Creo costante con tariffa/km
-3-Creo costante sconto under 18
-4-Creo costante sconto over 65
-5-Chiedo all'utente i km da percorrere e li metto in una variabile
-6-Chiedo all'utente gli anni e li metto in una variabile
-7-Calcolo costo
-8-Applico eventuali sconti
-9-Stampare
-*/
+//1-Prendere l'elemento dal DOM
+
+const bttn = document.getElementById ('button');
+const definitivePrice = document.getElementById ('target');
+const runKms = document.getElementById ('kms');
+const currentAge = document.getElementById ('age');
+
+//Creo una costante col prezzo/km del viaggio
+const tariff = 0.21;
+
+//Calcolo 
+bttn.addEventListener('click', function(){
+    //prendo i value dalla pagina
+    const rideKm = parseInt(kms.value)
+    const passengerAge = parseInt(age.value)
+
+    //calcolo costo viaggio
+    let ridePrice = rideKm * tariff
+    console.log (ridePrice) 
+    
+})
 
 
