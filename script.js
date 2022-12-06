@@ -24,6 +24,7 @@ const definitivePrice = document.getElementById ('target');
 const runKms = document.getElementById ('kms');
 const currentAge = document.getElementById ('age');
 
+
 //Creo una costante col prezzo/km del viaggio
 const tariff = 0.21;
 
@@ -35,8 +36,15 @@ bttn.addEventListener('click', function(){
 
     //calcolo costo viaggio
     let ridePrice = rideKm * tariff
-    console.log (ridePrice) 
-    
+     
+
+    //creo le costanti per la scontistica
+    const underSale = 20;
+    const overSale = 40;
+   
+    definitivePrice.innerText = ` Il prezzo del biglietto e di ${ridePrice}€`
+
 })
+
 
 
