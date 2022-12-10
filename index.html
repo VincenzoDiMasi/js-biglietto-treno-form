@@ -6,14 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket to Ride</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
     <script defer src="script.js"></script>
 </head>
 <body>
-    <input type="text" placeholder="Inserire nome" id="name">
-    <input type="number" min="0" placeholder="Inserire Km" id="kms">
-    <input type="number" min="1" max="120" placeholder="Età" id="age">
-    <button id="button">Scopri quanto costa</button>
-    <input type="reset" value="Annulla tutto">
-    <h1 id="target"></h1>
+    <header>
+        <h1 class="text-center pt-3">ACQUISTA IL TUO BIGLIETTO <span class="txt-green">F</span><span class="text-danger">S</span></h1>
+    </header>
+   <main class="container bg-danger p-2">
+        <section id="main-form" class="mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">INSERISCI QUI I TUOI DATI</h4>
+                    <hr>
+                    <div class="row row-cols-md-3">
+                        <div class="col">
+                            <label for="name" class="form-label">NOME</label>
+                            <input type="text" minlength="2" class="form-control" id="name" placeholder="Scrivi qui il tuo nome">
+                        </div>
+                        <div class="col">
+                            <label for="kms" class="form-label">QUANTI KM VUOI PERCORRERE?</label>
+                            <input type="number" min="10" class="form-control" id="kms" placeholder="Scrivi qui i km che vuoi percorrere">
+                        </div>
+                        <div class="col">
+                            <label for="age" class="form-label">ETÀ</label>
+                            <select class="form-select" id="age">
+                                <option value="1">Adulto</option>
+                                <option value="under">U-18</option>
+                                <option value="over">O-65</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary me-3"id="reset-button">Annulla</button>
+                    <button type="button" class="btn btn-primary" id="confirm-button">Vai!</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ticket-section" class="my-4 d-none">
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="ferrovie-dello-stato-italiane-logo-vector.png" class="img-fluid rounded-start" alt="treno">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Il tuo biglietto</h5>
+                      <hr>
+                      <h4 id="passenger-name">Antonella pepe</h4>
+                      <div class="row row-cols-md-4">
+                        <div class="col">
+                            <h6>TARIFFA</h6>
+                            <div id="rate">Tariffa ordinaria</div>
+                        </div>
+                        <div class="col">
+                            <h6>CARROZZA</h6>
+                            <div id="coach">9</div>
+                        </div>
+                        <div class="col">
+                            <h6>PNR</h6>
+                            <div id="pnr">9998776</div>
+                        </div>
+                        <div class="col">
+                            <h6>PREZZO</h6>
+                            <div id="price">25 $</div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <button class="btn btn-success mt-5">Conferma</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
+    </main>
+    
 </body>
 </html>
